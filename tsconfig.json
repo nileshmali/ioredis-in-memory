@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "es2016",
+    "module": "commonjs",
+    "declaration": false,
+    "sourceMap": false,
+    "noEmitHelpers": true,
+    "noImplicitAny": true,
+    "noImplicitUseStrict": true,  
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,        
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017"
+    ]
+  }
+}

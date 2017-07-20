@@ -1,0 +1,44 @@
+{
+  "name": "ioredis-in-memory",
+  "version": "0.0.1",
+  "description": "An ioredis with in memory backend for unit testing",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest --no-watchman --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nileshmali/ioredis-in-memory.git"
+  },
+  "keywords": [
+    "ioredis",
+    "mock-ioredis",
+    "ioredis-mock",
+    "mock",
+    "in-memory",
+    "in",
+    "memory",
+    "redis",
+    "redis-mock"
+  ],
+  "author": "Nilesh Mali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nileshmali/ioredis-in-memory/issues"
+  },
+  "homepage": "https://github.com/nileshmali/ioredis-in-memory#readme",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.8",
+    "@types/jest": "^20.0.4",
+    "@types/lodash.random": "^3.2.2",
+    "@types/minimatch": "^2.0.29",
+    "@types/node": "8.0.14",
+    "jest": "^20.0.4",
+    "typescript": "2.4.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "lodash.random": "^3.2.0",
+    "minimatch": "^3.0.4"
+  }
+}
