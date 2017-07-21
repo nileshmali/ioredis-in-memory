@@ -1,4 +1,4 @@
-export function expire(key:string, seconds:number) {
+export function expire(key: string, seconds: number) {
   if (!this.data.has(key)) {
     return 0;
   }

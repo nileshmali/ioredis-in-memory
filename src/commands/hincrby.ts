@@ -1,4 +1,4 @@
-export function hincrby(key:string, field:string, increment:string = '0') {
+export function hincrby(key: string, field: string, increment = '0') {
   const hash = this.data.get(key) || { [field]: '0' };
   if (!{}.hasOwnProperty.call(hash, field)) {
     hash[field] = '0';

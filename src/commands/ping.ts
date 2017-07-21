@@ -1,3 +1,3 @@
-export function ping(message: string = 'PONG') {
+export function ping(message = 'PONG') {
   return message;
 }

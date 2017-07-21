@@ -1,4 +1,4 @@
-export function exists(...keys:Array<any>) {
+export function exists(...keys: Array<any>) {
   return keys.reduce((totalExists, key) => {
     if (this.data.has(key)) {
       return totalExists + 1;

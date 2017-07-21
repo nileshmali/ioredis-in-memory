@@ -1,5 +1,5 @@
 export function rename(key: string, newKey: string) {
-  if(!this.data.has(key)) {
+  if (!this.data.has(key)) {
     throw new Error('No such a key');
   }
   const value = this.data.get(key);

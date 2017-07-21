@@ -49,7 +49,10 @@
         "variable-declaration": "nospace"
       }
     ],
-    "curly": true,
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
     "variable-name": [
       true,
       "ban-keywords",

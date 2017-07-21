@@ -1,6 +1,6 @@
 import Expires from './Expires';
 
-export default class Store extends Map<string, any>{
+export default class Store extends Map<string, any> {
   private expires: Expires;
 
   constructor(expires: Expires, initial: any = {}) {
