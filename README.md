@@ -12,8 +12,12 @@
 - [x] Basic commands support
 - [ ] Pipeline support
 
+## Credits
+
+This is rewrite of [ioredis-mock](https://github.com/stipsan/ioredis-mock). Borrows most of code from it.
+
 ## License
 
 Copyright (c) Nilesh Mali. All rights reserved.
 
-Licensed under the [MIT](LICENSE.txt) License.
+Licensed under the [MIT](LICENSE) License.
