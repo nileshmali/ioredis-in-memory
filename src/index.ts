@@ -29,7 +29,7 @@ class RedisInMemory extends EventEmitter {
     }
     return this;
   }
-  exec(cb: Function): Promise<Array<any>> {    
+  exec(cb: Function): Promise<Array<any>> {
     return Promise.all(this.batch.map(promise => promise()))
       .then(results => results.map(result => [null, result]))
       .nodeify(cb);
@@ -58,7 +58,7 @@ function prepareArg(arg: any) {
     return [arg];
   }
   if (typeof arg === 'object') {
-    const newArgs: Array<string> = [];
+    const newArgs: string[] = [];
     Object.keys(arg).forEach((key: string) => {
       newArgs.push(key, arg[key]);
     });

@@ -6,7 +6,7 @@ export default class Store extends Map<string, any>{
   constructor(expires: Expires, initial: any = {}) {
     super();
     this.expires = expires;
-    Object.keys(initial).forEach((key: string) => this.set(key, initial[key]))
+    Object.keys(initial).forEach((key: string) => this.set(key, initial[key]));
   }
 
   delete(key: string): boolean {
