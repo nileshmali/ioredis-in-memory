@@ -3,6 +3,8 @@ engines:
     enabled: true
     channel: beta
     config: tslint.json
+  fixme:
+    enabled: true
 ratings:
   paths:
     - "**.ts"
