@@ -4,6 +4,10 @@
   "description": "An ioredis with in memory backend for unit testing",
   "main": "./lib/index.js",
   "scripts": {
+    "clean": "rimraf lib",
+    "compile": "tsc",
+    "build": "npm run clean && npm run compile",
+    "prepublish": "npm run build",
     "test": "jest --no-watchman --no-cache"
   },
   "repository": {
@@ -34,6 +38,7 @@
     "@types/minimatch": "^2.0.29",
     "@types/node": "8.0.14",
     "jest": "^20.0.4",
+    "rimraf": "^2.6.1",
     "tslint": "^5.5.0",
     "typescript": "2.4.2"
   },
