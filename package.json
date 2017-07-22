@@ -3,12 +3,15 @@
   "version": "0.0.2",
   "description": "An ioredis with in memory backend for unit testing",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf lib coverage",
     "compile": "tsc",
-    "build": "npm run clean && npm run compile",
-    "prepublish": "npm run build",
-    "test": "jest --no-watchman --no-cache"
+    "build": "run-s clean lint compile",
+    "prepublishOnly": "npm run build",
+    "lint": "tslint src/**.ts",
+    "test": "jest --no-watchman --no-cache",
+    "test:dev": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -38,7 +41,9 @@
     "@types/minimatch": "^2.0.29",
     "@types/node": "8.0.14",
     "jest": "^20.0.4",
+    "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
+    "ts-jest": "^20.0.7",
     "tslint": "^5.5.0",
     "typescript": "2.4.2"
   },
@@ -46,5 +51,41 @@
     "bluebird": "^3.5.0",
     "lodash.random": "^3.2.0",
     "minimatch": "^3.0.4"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+        "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "mapCoverage": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/index.ts",
+      "!src/commands/index.ts"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "lcov",
+      "html"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 10,
+        "functions": 10,
+        "lines": 10,
+        "statements": 10
+      }
+    }
   }
 }
