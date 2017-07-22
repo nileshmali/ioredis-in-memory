@@ -11,7 +11,7 @@ export default class Store extends Map<string, any> {
 
   delete(key: string): boolean {
     if (this.expires.has(key)) {
-      this.delete(key);
+      this.expires.delete(key);
     }
     return super.delete(key);
   }
@@ -37,7 +37,7 @@ export default class Store extends Map<string, any> {
       return Object.assign({}, value);
     }
 
-    return value;
+    return value || null;
   }
   has(key: string): boolean {
     if (this.expires.has(key) && this.expires.isExpired(key)) {
