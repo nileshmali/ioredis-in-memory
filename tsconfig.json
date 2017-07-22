@@ -1,17 +1,19 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "outDir": "./lib",
+    "outDir": "lib",
+    "rootDir": "src",
     "target": "es2016",
     "module": "commonjs",
-    "declaration": false,
+    "moduleResolution": "node",
+    "declaration": true,
     "sourceMap": false,
     "noEmitHelpers": true,
     "noImplicitAny": true,
-    "noImplicitUseStrict": true,  
+    "noImplicitUseStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "removeComments": true,        
+    "removeComments": true,
     "typeRoots": [
       "node_modules/@types"
     ],

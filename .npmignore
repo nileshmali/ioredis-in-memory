@@ -1,4 +1,6 @@
 .vscode/
 .editorconfig
 tslint.json
+tsconfig.json
 *.yml
+src/
