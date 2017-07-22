@@ -82,12 +82,8 @@ export * from './time';
 export * from './ttl';
 export * from './type';
 
-export const auth = replyOK;
-export const bgrewriteaof = replyOK;
-export const bgsave = replyOK;
-export const save = replyOK;
-export const watch = replyOK;
-
-function replyOK(): string {
-  return 'OK';
-}
+export const auth = () => 'OK';
+export const bgrewriteaof = () => 'OK';
+export const bgsave = () => 'OK';
+export const save = () => 'OK';
+export const watch = () => 'OK';
