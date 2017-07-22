@@ -10,6 +10,7 @@
     "build": "run-s clean lint compile",
     "prepublishOnly": "npm run build",
     "lint": "tslint src/**.ts",
+    "pretest": "npm run lint",
     "test": "jest --no-watchman --no-cache",
     "test:dev": "jest --watch"
   },
@@ -75,8 +76,7 @@
     ],
     "coverageReporters": [
       "text-summary",
-      "lcov",
-      "html"
+      "lcov"
     ],
     "coverageDirectory": "coverage",
     "coverageThreshold": {
