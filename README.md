@@ -5,6 +5,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/nileshmali/ioredis-in-memory.svg?style=flat-square)](https://codeclimate.com/github/nileshmali/ioredis-in-memory)
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/nileshmali/ioredis-in-memory.svg?style=flat-square)](https://codeclimate.com/github/nileshmali/ioredis-in-memory/coverage)
 [![Issue Count](https://img.shields.io/codeclimate/issues/github/nileshmali/ioredis-in-memory.svg?style=flat-square)](https://codeclimate.com/github/nileshmali/ioredis-in-memory)
+[![npm](https://img.shields.io/npm/v/ioredis-in-memory.svg?style=flat-square)](https://www.npmjs.com/package/ioredis-in-memory)
 [![npm](https://img.shields.io/npm/dt/ioredis-in-memory.svg?style=flat-square)](https://www.npmjs.com/package/ioredis-in-memory)
 
 [![NPM](https://nodei.co/npm/ioredis-in-memory.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ioredis-in-memory/)
