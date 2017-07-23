@@ -1,20 +1,20 @@
 import { random } from 'lodash';
 
-export function srandmember(key: string, count: number) {
-  if (this.data.has(key) && !(this.data.get(key) instanceof Array)) {
+export function srandmember(key: string, count = 1) {
+  if (this.data.has(key) && !(this.data.get(key) instanceof Set)) {
     throw new Error(`Key ${key} does not contain a set`);
   }
 
-  const list = this.data.get(key) || [];
+  const value = this.data.get(key) || new Set();
+  const list = Array.from(value);
   const total = list.length;
 
   if (total === 0) {
     return null;
   }
 
-  const shouldReturnArray = count !== undefined;
-  const max = shouldReturnArray ? Math.abs(count) : 1;
-  const skipDuplicates = shouldReturnArray && count > -1;
+  const max = Math.abs(count);
+  const skipDuplicates = count > -1;
 
   if (total <= max && skipDuplicates) {
     return list;
@@ -24,12 +24,9 @@ export function srandmember(key: string, count: number) {
   let results = 0;
   while (results < max) {
     const item = list[random(0, total - 1)];
-
-    if (!skipDuplicates || items.indexOf(item) === -1) {
-      results += 1;
-      items.push(item);
-    }
+    results += 1;
+    items.push(item);
   }
 
-  return shouldReturnArray ? items : items[0];
+  return (max > 1) ? items : items[0];
 }
