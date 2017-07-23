@@ -3,7 +3,7 @@ export function set(key: string, value: any, ...options: Array<string>) {
   const xx = options.indexOf('XX') !== -1;
   const filteredOptions = options.filter(option => option !== 'NX' && option !== 'XX');
 
-  if (nx && xx) throw new Error('ERR syntax error');
+  if (nx && xx) throw new Error('ERR syntax error.');
   if (nx && this.data.has(key)) return null;
   if (xx && !this.data.has(key)) return null;
 
