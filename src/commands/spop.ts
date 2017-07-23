@@ -1,6 +1,6 @@
 import { random } from 'lodash';
 
-export function spop(key: string, count: number) {
+export function spop(key: string, count = 1) {
   if (this.data.has(key) && !(this.data.get(key) instanceof Set)) {
     throw new Error(`Key ${key} does not contain a set`);
   }
@@ -13,23 +13,20 @@ export function spop(key: string, count: number) {
     return null;
   }
 
-  const shouldReturnArray = count !== undefined;
-  const max = shouldReturnArray ? count : 1;
-
-  if (total <= max) {
+  if (total <= count) {
     this.data.set(key, new Set());
     return list;
   }
 
   const items = [];
   let results = 0;
-  while (results < max) {
+  while (results < count) {
     const item = list.splice(random(0, list.length - 1), 1);
 
     results += 1;
-    items.push(item);
+    items.push(...item);
   }
   this.data.set(key, new Set(list));
 
-  return shouldReturnArray ? items : items[0];
+  return (count > 1) ? items : items[0];
 }
