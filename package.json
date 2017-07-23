@@ -10,7 +10,7 @@
     "build": "run-s clean lint compile",
     "prepublishOnly": "npm run build",
     "lint": "tslint src/**.ts",
-    "pretest": "npm run lint",
+    "pretest": "run-s clean lint",
     "test": "jest --no-watchman --no-cache",
     "test:dev": "jest --watch"
   },
@@ -58,15 +58,22 @@
     "npm": ">=3.0.0"
   },
   "jest": {
+    "verbose": true,
     "transform": {
       ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/",
+      "<rootDir>/coverage/"
+    ],
     "moduleFileExtensions": [
       "ts",
       "js",
       "json"
     ],
+    "resetMocks": true,
     "mapCoverage": true,
     "collectCoverage": true,
     "collectCoverageFrom": [
@@ -81,10 +88,10 @@
     "coverageDirectory": "coverage",
     "coverageThreshold": {
       "global": {
-        "branches": 10,
-        "functions": 10,
-        "lines": 10,
-        "statements": 10
+        "branches": 20,
+        "functions": 20,
+        "lines": 20,
+        "statements": 20
       }
     }
   }
