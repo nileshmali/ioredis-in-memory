@@ -1,5 +1,11 @@
 import * as minimatch from 'minimatch';
 
 export function keys(glob: string) {
-  return this.data.keys().filter((key: string) => minimatch(key, glob));
+  const keys: any[] = [];
+  this.data.forEach((value: any, key: string) => {
+    if (minimatch(key, glob)) {
+      keys.push(key);
+    }
+  });
+  return keys;
 }
