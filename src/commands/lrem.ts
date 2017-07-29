@@ -1,6 +1,6 @@
 export function lrem(key: string, c: string, value: any) {
   if (this.data.has(key) && !(this.data.get(key) instanceof Array)) {
-    return 0;
+    throw new Error(`Key ${key} does not contain a list`);
   }
   const count = parseInt(c, 10);
   const list = [...(this.data.get(key) || [])];
