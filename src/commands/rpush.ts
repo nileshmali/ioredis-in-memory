@@ -3,7 +3,7 @@ export function rpush(key: string, ...values: Array<any>) {
     throw new Error(`Key ${key} does not contain a list`);
   }
   const list = this.data.get(key) || [];
-  const length = list.push(...values);
+  list.push(...values);
   this.data.set(key, list);
-  return length;
+  return list.length;
 }
