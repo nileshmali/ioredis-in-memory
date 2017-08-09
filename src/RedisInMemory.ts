@@ -23,7 +23,7 @@ export default class RedisInMemory extends EventEmitter {
       this.emit('ready');
     });
   }
-  multi(batch: string[][]): this {
+  multi(batch?: string[][]): this {
     if (batch && batch.length > 0) {
       this.batch = batch.map(([command, ...options]) => (<any>this)[command].bind(this, ...options));
     }
