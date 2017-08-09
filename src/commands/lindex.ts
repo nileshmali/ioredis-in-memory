@@ -5,5 +5,5 @@ export function lindex(key: string, i: string) {
   const index = parseInt(i, 10);
   const list = this.data.get(key) || [];
   const item = list[index < 0 ? list.length + index : index];
-  return item !== undefined ? item : null;
+  return (item || null);
 }
