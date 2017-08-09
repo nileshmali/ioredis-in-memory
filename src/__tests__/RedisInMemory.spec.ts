@@ -24,4 +24,10 @@ describe('Test RedisInMemory', () => {
       expect(second[1]).toBe('second');
     });
   });
+  it('should support transaction without initial args', () => {
+    const redis = new RedisInMemory();
+    let multi = redis.multi();
+    (<any>redis).ping();
+    return multi.exec();
+  });
 });
