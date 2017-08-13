@@ -12,7 +12,7 @@
     "noImplicitAny": true,
     "noImplicitUseStrict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "removeComments": true,
     "typeRoots": [
       "node_modules/@types"
