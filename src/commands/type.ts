@@ -20,4 +20,5 @@ export function type(key: string) {
   if (typeof value === 'object') {
     return 'hash';
   }
+  return 'none';
 }
