@@ -1,3 +1,7 @@
 export function get(key: string): any {
-  return this.data.get(key) || null;
+  const value = this.data.get(key) || null;
+  if (value && typeof value !== 'string') {
+    throw new Error(`Key ${key} does not contain a string`);
+  }
+  return value;
 }
