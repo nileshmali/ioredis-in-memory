@@ -8,12 +8,14 @@ describe('Test type command', () => {
     redis.set('mylist', [1, 2, 3]);
     redis.set('myset', new Set([1, 2, 3]));
     redis.set('mystring', 'value');
+    redis.set('mynumber', 1);
     redis.set('myhash', { 'key': 'value' });
     expect((<any>redis).type('mylist')).toBe('list');
     expect((<any>redis).type('myset')).toBe('set');
     expect((<any>redis).type('mystring')).toBe('string');
     expect((<any>redis).type('myhash')).toBe('hash');
     expect((<any>redis).type('notakey')).toBe('none');
+    expect((<any>redis).type('mynumber')).toBe('none');
   });
 });
 

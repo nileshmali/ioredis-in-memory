@@ -6,6 +6,7 @@ describe('Test llen command', () => {
   it('should length of list', () => {
     const redis = new MockRedis({ mylist: ['Hello', 'World'] });
     expect((<any>redis).llen('mylist')).toBe(2);
+    expect((<any>redis).llen('nosuchkey')).toBe(0);
   });
 
   it('should throw if key does not contain list', () => {
