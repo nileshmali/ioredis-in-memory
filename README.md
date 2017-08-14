@@ -1,5 +1,7 @@
 # ioredis-in-memory
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nileshmali/ioredis-in-memory.svg)](https://greenkeeper.io/)
+
 [![dependencies Status](https://david-dm.org/nileshmali/ioredis-in-memory/status.svg?style=flat-square)](https://david-dm.org/nileshmali/ioredis-in-memory)
 [![devDependencies Status](https://david-dm.org/nileshmali/ioredis-in-memory/dev-status.svg?style=flat-square)](https://david-dm.org/nileshmali/ioredis-in-memory?type=dev)
 [![Code Climate](https://img.shields.io/codeclimate/github/nileshmali/ioredis-in-memory.svg?style=flat-square)](https://codeclimate.com/github/nileshmali/ioredis-in-memory)
