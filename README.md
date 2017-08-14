@@ -31,7 +31,7 @@ const redis = new RedisInMemory({
 ## Roadmap
 
 - [x] Basic commands support
-- [ ] Unit tests for all commands
+- [x] Unit tests for all commands
 - [ ] Publish compatibility table
 - [ ] Pipeline support
 
