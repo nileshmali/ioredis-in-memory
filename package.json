@@ -39,7 +39,7 @@
     "@types/bluebird": "^3.5.8",
     "@types/jest": "^20.0.6",
     "@types/lodash.random": "^3.2.3",
-    "@types/minimatch": "^2.0.29",
+    "@types/minimatch": "^3.0.0",
     "@types/node": "^8.0.20",
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
