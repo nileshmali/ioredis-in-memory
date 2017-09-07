@@ -41,7 +41,7 @@
     "@types/lodash.random": "^3.2.3",
     "@types/minimatch": "^3.0.1",
     "@types/node": "^8.0.20",
-    "jest": "^20.0.4",
+    "jest": "^21.0.0",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
     "ts-jest": "^21.0.0",
