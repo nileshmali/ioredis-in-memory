@@ -37,7 +37,7 @@
   "homepage": "https://github.com/nileshmali/ioredis-in-memory#readme",
   "devDependencies": {
     "@types/bluebird": "^3.5.8",
-    "@types/jest": "^23.0.0",
+    "@types/jest": "^23.3.9",
     "@types/lodash.random": "^3.2.3",
     "@types/minimatch": "^3.0.1",
     "@types/node": "^10.3.2",
